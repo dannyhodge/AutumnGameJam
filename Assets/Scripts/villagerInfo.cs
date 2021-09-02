@@ -4,16 +4,25 @@ using UnityEngine;
 
 public class villagerInfo : MonoBehaviour
 {
+    public GameObject Scripts;
+
     public bool isSelected = false;
+    public GameObject active;
 
     void Start()
     {
-        
+        Scripts = GameObject.Find("_Scripts");
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (isSelected)
+        {
+            active.SetActive(true);
+        }
+        else
+        {
+            active.SetActive(false);
+        }
     }
 }
