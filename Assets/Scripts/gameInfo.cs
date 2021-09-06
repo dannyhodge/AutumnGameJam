@@ -11,19 +11,21 @@ public class gameInfo : MonoBehaviour
     public int currentIron = 0;
 
     public GameObject activeVillager;
-    public GameObject[] allVillagers;
+    public List<GameObject> allVillagers;
 
-    public GameObject[] allTrees;
-    public GameObject[] allStone;
+    public List<GameObject> allTrees;
+    public List<GameObject> allStone;
 
-    public GameObject[] allTargets;
+    public List<GameObject> allTargets;
+
+    public GameObject ground;
 
     void Start()
     {
-        allVillagers = GameObject.FindGameObjectsWithTag("Villager");
-        allTrees = GameObject.FindGameObjectsWithTag("Tree");
-        allStone= GameObject.FindGameObjectsWithTag("Stone");
-        allTargets = allTrees.Concat(allStone).ToArray();
+        allVillagers = GameObject.FindGameObjectsWithTag("Villager").ToList();
+        allTrees = GameObject.FindGameObjectsWithTag("Tree").ToList();
+        allStone = GameObject.FindGameObjectsWithTag("Stone").ToList();
+        allTargets = allTrees.Concat(allStone).ToList();
     }
 
     // Update is called once per frame

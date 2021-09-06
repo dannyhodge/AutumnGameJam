@@ -25,6 +25,15 @@ public class selectCharacter : MonoBehaviour
                     //Debug.Log("Hit " + hit.transform.gameObject.name);
                     if (hit.transform.gameObject.tag == "Villager")
                     {
+                        foreach(GameObject villager in GetComponent<gameInfo>().allVillagers)
+                        {
+                            villager.GetComponent<villagerInfo>().isSelected = false;
+                        }
+                        foreach (GameObject tree in GetComponent<gameInfo>().allTargets)
+                        {
+                            tree.GetComponent<resourceInfo>().isSelected = false;
+                        }
+        
                         hit.transform.gameObject.GetComponent<villagerInfo>().isSelected = true;
                         GetComponent<gameInfo>().activeVillager = hit.transform.gameObject;
                         break;

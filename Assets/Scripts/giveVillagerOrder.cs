@@ -24,37 +24,36 @@ public class giveVillagerOrder : MonoBehaviour
                     Debug.Log("Hit " + hitInfo.transform.gameObject.name);
                     if (hitInfo.transform.gameObject.tag == "Tree")
                     {
-                        
-                        foreach(GameObject tree in GetComponent<gameInfo>().allTrees)
+
+                        foreach (GameObject resource in GetComponent<gameInfo>().allTargets)
                         {
-                            tree.GetComponent<treeInfo>().isSelected = false;
+                            resource.GetComponent<resourceInfo>().isSelected = false;
                         }
 
-                        hitInfo.transform.gameObject.GetComponent<treeInfo>().isSelected = true;
+                        hitInfo.transform.gameObject.GetComponent<resourceInfo>().isSelected = true;
 
                         activeTarget = hitInfo.transform.gameObject;
                         GetComponent<gameInfo>().activeVillager.GetComponent<villagerMove>().nextPosition = hitInfo.transform.gameObject.transform;
                         GetComponent<gameInfo>().activeVillager.GetComponent<villagerMove>().nextAction = State.Chopping;
+                        GetComponent<gameInfo>().activeVillager.GetComponent<villagerInfo>().currentTarget = hitInfo.transform.gameObject;
                     }
 
                     if (hitInfo.transform.gameObject.tag == "Stone")
                     {
 
-                        foreach (GameObject stone in GetComponent<gameInfo>().allStone)
+                        foreach (GameObject resource in GetComponent<gameInfo>().allTargets)
                         {
-                            stone.GetComponent<rockInfo>().isSelected = false;
+                            resource.GetComponent<resourceInfo>().isSelected = false;
                         }
 
-                        hitInfo.transform.gameObject.GetComponent<rockInfo>().isSelected = true;
+                        hitInfo.transform.gameObject.GetComponent<resourceInfo>().isSelected = true;
 
                         activeTarget = hitInfo.transform.gameObject;
                         GetComponent<gameInfo>().activeVillager.GetComponent<villagerMove>().nextPosition = hitInfo.transform.gameObject.transform;
                         GetComponent<gameInfo>().activeVillager.GetComponent<villagerMove>().nextAction = State.Mining;
+                        GetComponent<gameInfo>().activeVillager.GetComponent<villagerInfo>().currentTarget = hitInfo.transform.gameObject;
                     }
-                    else
-                    {
-
-                    }
+      
                 }
        
             }

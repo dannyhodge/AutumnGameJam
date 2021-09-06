@@ -11,6 +11,7 @@ public class villagerInfo : MonoBehaviour
     public bool isSelected = false;
     public GameObject active;
     public State currentState = State.Idle;
+    public GameObject currentTarget;
 
     void Start()
     {

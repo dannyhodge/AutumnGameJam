@@ -27,6 +27,7 @@ public class villagerMove : MonoBehaviour
                         
             if(navMeshAgent.remainingDistance <= distanceToStopMoving)
             {
+                nextPosition = null;
                 GetComponent<villagerInfo>().currentState = nextAction;
             }
         }
