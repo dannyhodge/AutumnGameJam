@@ -1,7 +1,8 @@
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class treeInfo : MonoBehaviour
+public class rockInfo : MonoBehaviour
 {
     public int health = 10;
     public bool isSelected = false;
@@ -9,12 +10,12 @@ public class treeInfo : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        if(isSelected)
+        if (isSelected)
         {
             active.SetActive(true);
         }
@@ -22,6 +23,6 @@ public class treeInfo : MonoBehaviour
         {
             active.SetActive(false);
         }
-        
+
     }
 }

@@ -15,29 +15,31 @@ public class selectCharacter : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit hitInfo = new RaycastHit();
-            bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
-            if (hit)
+            RaycastHit[] hitInfos;
+            hitInfos = Physics.RaycastAll(Camera.main.ScreenPointToRay(Input.mousePosition));
+
+            if (hitInfos.Length > 0)
             {
-                //Debug.Log("Hit " + hitInfo.transform.gameObject.name);
-                if (hitInfo.transform.gameObject.tag == "Villager")
+                foreach (RaycastHit hit in hitInfos)
                 {
-                    hitInfo.transform.gameObject.GetComponent<villagerInfo>().isSelected = true;
-                    GetComponent<gameInfo>().activeVillager = hitInfo.transform.gameObject;
-                }
-                else
-                {
-                    if (GetComponent<gameInfo>().activeVillager != null)
+                    //Debug.Log("Hit " + hit.transform.gameObject.name);
+                    if (hit.transform.gameObject.tag == "Villager")
                     {
-                        GetComponent<gameInfo>().activeVillager.GetComponent<villagerInfo>().isSelected = false;
-                        GetComponent<gameInfo>().activeVillager = null;
+                        hit.transform.gameObject.GetComponent<villagerInfo>().isSelected = true;
+                        GetComponent<gameInfo>().activeVillager = hit.transform.gameObject;
+                        break;
+                    }
+                    else
+                    {
+                        if (GetComponent<gameInfo>().activeVillager != null)
+                        {
+                            GetComponent<gameInfo>().activeVillager.GetComponent<villagerInfo>().isSelected = false;
+                            GetComponent<gameInfo>().activeVillager = null;
+                        }
                     }
                 }
             }
-            else
-            {
-                //Debug.Log("No hit");
-            }
+            
         }
     }
 }

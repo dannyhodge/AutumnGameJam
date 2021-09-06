@@ -6,8 +6,11 @@ public class villagerInfo : MonoBehaviour
 {
     public GameObject Scripts;
 
+    public string villagerName;
+    public int health = 10;
     public bool isSelected = false;
     public GameObject active;
+    public State currentState = State.Idle;
 
     void Start()
     {
@@ -25,4 +28,15 @@ public class villagerInfo : MonoBehaviour
             active.SetActive(false);
         }
     }
+}
+
+
+public enum State
+{
+    Idle = 0,
+    Chopping = 1,
+    Mining = 2,
+    Defending = 3,
+    Farming = 4,
+    Travelling = 5
 }

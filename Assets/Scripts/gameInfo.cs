@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class gameInfo : MonoBehaviour
@@ -10,10 +11,19 @@ public class gameInfo : MonoBehaviour
     public int currentIron = 0;
 
     public GameObject activeVillager;
+    public GameObject[] allVillagers;
+
+    public GameObject[] allTrees;
+    public GameObject[] allStone;
+
+    public GameObject[] allTargets;
 
     void Start()
     {
-        
+        allVillagers = GameObject.FindGameObjectsWithTag("Villager");
+        allTrees = GameObject.FindGameObjectsWithTag("Tree");
+        allStone= GameObject.FindGameObjectsWithTag("Stone");
+        allTargets = allTrees.Concat(allStone).ToArray();
     }
 
     // Update is called once per frame
