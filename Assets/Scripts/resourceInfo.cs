@@ -12,6 +12,9 @@ public class resourceInfo : MonoBehaviour
     public GameObject active;
     public GameObject scripts;
 
+    public float deathTimer = 0f;
+    public bool dead = false;
+
     void Start()
     {
         scripts = GameObject.Find("_Scripts");
@@ -19,7 +22,7 @@ public class resourceInfo : MonoBehaviour
 
     void Update()
     {
-        if(isSelected)
+        if (isSelected)
         {
             active.SetActive(true);
         }
@@ -27,25 +30,25 @@ public class resourceInfo : MonoBehaviour
         {
             active.SetActive(false);
         }
-        
-        if(health <= 0)
+
+        if (health <= 0)
         {
-
-            switch(resourceType)
+            if (dead == false)
             {
-                case ResourceType.Tree:
-                    scripts.GetComponent<gameInfo>().currentWood += value;
-                    scripts.GetComponent<gameInfo>().allTrees.Remove(gameObject);
-                    break;
+                switch (resourceType)
+                {
+                    case ResourceType.Tree:
+                        scripts.GetComponent<gameInfo>().currentWood += value;
+                        scripts.GetComponent<gameInfo>().allTrees.Remove(gameObject);
+                        break;
 
-                case ResourceType.Stone:
-                    scripts.GetComponent<gameInfo>().currentStone += value;
-                    scripts.GetComponent<gameInfo>().allStone.Remove(gameObject);
-                    break;
-                    
-            }
-      
+                    case ResourceType.Stone:
+                        scripts.GetComponent<gameInfo>().currentStone += value;
+                        scripts.GetComponent<gameInfo>().allStone.Remove(gameObject);
+                        break;
 
+                }
+            }   
             scripts.GetComponent<gameInfo>().allTargets.Remove(gameObject);
             foreach (GameObject villager in scripts.GetComponent<gameInfo>().allVillagers)
             {
@@ -55,7 +58,23 @@ public class resourceInfo : MonoBehaviour
                     villager.GetComponent<villagerInfo>().currentState = State.Idle;
                 }
             }
+
+            DestroyAndRemoveObstacle();
+
+        }
+    }
+
+    void DestroyAndRemoveObstacle()
+    {
+        dead = true;
+        gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
+
+        deathTimer += Time.deltaTime;
+
+        if (deathTimer >= 0.1f)
+        {
             scripts.GetComponent<gameInfo>().ground.GetComponent<NavMeshSurface>().BuildNavMesh();
+
             Destroy(gameObject);
         }
     }

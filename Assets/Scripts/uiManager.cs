@@ -1,38 +1,101 @@
-using System.Collections;
-using System.Collections.Generic;
+
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class uiManager : MonoBehaviour
 {
+    public gameInfo GameInfo;
+
     public GameObject woodUI;
     public GameObject stoneUI;
+    public GameObject foodUI;
     public GameObject timeOfYear;
     public GameObject timeOfYearPanel;
+
+    public GameObject autumnText;
+    public GameObject winterText;
+    public GameObject springText;
+    public GameObject summerText;
+
+    public GameObject yearText;
+
+    public GameObject characterInfo;
+    public GameObject nameVal;
+    public GameObject hungerVal;
+    public GameObject healthVal;
+    public GameObject warmthVal;
+
+    public seasonManager SeasonManager;
 
     public float currentDistanceFloat = 1f;
     public float incrementAmount = 5;
 
+    void Start()
+    {
+        GameInfo = GetComponent<gameInfo>();
+
+    }
+
     void Update()
     {
-        woodUI.GetComponent<Text>().text = GetComponent<gameInfo>().currentWood.ToString();
-        stoneUI.GetComponent<Text>().text = GetComponent<gameInfo>().currentStone.ToString();
+        SeasonManager = GetComponent<seasonManager>();
+        woodUI.GetComponent<TextMeshProUGUI>().text = GameInfo.currentWood.ToString();
+        stoneUI.GetComponent<TextMeshProUGUI>().text = GameInfo.currentStone.ToString();
+        foodUI.GetComponent<TextMeshProUGUI>().text = GameInfo.currentFood.ToString();
 
-        //var width = Mathf.Abs(timeOfYearPanel.GetComponent<RectTransform>().sizeDelta.x);
-        //var numIncrementsMax = GetComponent<seasonManager>().seasonSliderMax;
+        characterInfo.SetActive(GameInfo.activeVillager != null);
 
-        var numIncrementsCurrent = GetComponent<seasonManager>().seasonSliderCurrent;
-
-        //var distPerIncrement = width / numIncrementsMax;
-
-        //Debug.Log("width " + width);
-        //Debug.Log("numIncrementsMax " + numIncrementsMax);
-        //Debug.Log("distPerIncrement " + distPerIncrement);
+        if (GameInfo.activeVillager != null)
+        {
+            nameVal.GetComponent<TextMeshProUGUI>().text = "Name: " + GameInfo.activeVillager.GetComponent<villagerInfo>().villagerName;
+            healthVal.GetComponent<TextMeshProUGUI>().text = "Health: " + GameInfo.activeVillager.GetComponent<villagerInfo>().health;
+            hungerVal.GetComponent<TextMeshProUGUI>().text = "Hunger: " + GameInfo.activeVillager.GetComponent<villagerInfo>().hunger;
+            warmthVal.GetComponent<TextMeshProUGUI>().text = "Warmth: " + GameInfo.activeVillager.GetComponent<villagerInfo>().warmth;
+        }
+        var numIncrementsCurrent = SeasonManager.seasonSliderCurrent;
 
         currentDistanceFloat = numIncrementsCurrent * incrementAmount;
 
-        //Debug.Log("currentDistance " + currentDistanceFloat);
-
         timeOfYear.GetComponent<RectTransform>().SetInsetAndSizeFromParentEdge(RectTransform.Edge.Left, currentDistanceFloat, timeOfYear.GetComponent<RectTransform>().rect.width);
+
+        yearText.GetComponent<Text>().text = $"Year {SeasonManager.currentYear}";
+
+        HandleNewSeason();
+    }
+
+    void HandleNewSeason()
+    {
+        switch (SeasonManager.currentSeason)
+        {
+            case Season.Autumn:
+                autumnText.GetComponent<Text>().fontStyle = FontStyle.Bold;
+                MakeTextNotBold(new GameObject[] { winterText, springText, summerText });
+                break;
+
+            case Season.Winter:
+                winterText.GetComponent<Text>().fontStyle = FontStyle.Bold;
+                MakeTextNotBold(new GameObject[] { autumnText, springText, summerText });
+                break;
+
+            case Season.Spring:
+                springText.GetComponent<Text>().fontStyle = FontStyle.Bold;
+                MakeTextNotBold(new GameObject[] { winterText, autumnText, summerText });
+                break;
+
+            case Season.Summer:
+                summerText.GetComponent<Text>().fontStyle = FontStyle.Bold;
+                MakeTextNotBold(new GameObject[] { winterText, springText, autumnText });
+                break;
+        }
+    }
+
+    void MakeTextNotBold(GameObject[] seasons)
+    {
+        foreach(GameObject season in seasons)
+        {
+            season.GetComponent<Text>().fontStyle = FontStyle.Normal;
+        }
+        
     }
 }

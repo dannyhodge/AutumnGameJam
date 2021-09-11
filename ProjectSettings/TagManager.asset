@@ -8,6 +8,8 @@ TagManager:
   - Ground
   - Tree
   - Stone
+  - Farm
+  - Iron
   layers:
   - Default
   - TransparentFX

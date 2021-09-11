@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 5280042513795551444}
   - component: {fileID: 7689513613450352045}
   - component: {fileID: 564208347}
+  - component: {fileID: 3361523629855298730}
   m_Layer: 0
   m_Name: Villager
   m_TagString: Villager
@@ -198,8 +199,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scripts: {fileID: 0}
-  villagerName: Bob
+  villagerName: Bill
   health: 10
+  hunger: 10
   isSelected: 0
   active: {fileID: 7983400193867467569}
   currentState: 0
@@ -256,4 +258,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionSpeed: 2
   actionTimer: 0
-  gatherStrength: 5
+  gatherStrength: 2
+--- !u!114 &3361523629855298730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7983400193915631972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f0d0fd0e1a6d3445830c47bbc3f4e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VillagerInfo: {fileID: 0}
+  Scripts: {fileID: 0}
+  hungerTimer: 0
+  hungerTimerMax: 6
+  amountEaten: 5

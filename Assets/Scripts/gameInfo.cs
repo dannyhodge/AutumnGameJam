@@ -16,6 +16,8 @@ public class gameInfo : MonoBehaviour
     public List<GameObject> allTrees;
     public List<GameObject> allStone;
 
+    public List<GameObject> allFarms;
+
     public List<GameObject> allTargets;
 
     public GameObject ground;
@@ -25,10 +27,10 @@ public class gameInfo : MonoBehaviour
         allVillagers = GameObject.FindGameObjectsWithTag("Villager").ToList();
         allTrees = GameObject.FindGameObjectsWithTag("Tree").ToList();
         allStone = GameObject.FindGameObjectsWithTag("Stone").ToList();
-        allTargets = allTrees.Concat(allStone).ToList();
+        allFarms = GameObject.FindGameObjectsWithTag("Farm").ToList();
+        allTargets = allTrees.Concat(allStone).Concat(allFarms).ToList();
     }
 
-    // Update is called once per frame
     void Update()
     {
         

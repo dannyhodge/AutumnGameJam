@@ -10,6 +10,8 @@ public class villagerMove : MonoBehaviour
 
     public float distanceToStopMoving = 30f;
 
+    //public bool firstFrame = true;
+
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -24,12 +26,15 @@ public class villagerMove : MonoBehaviour
             GetComponent<villagerInfo>().currentState = State.Travelling;
 
             navMeshAgent.stoppingDistance = distanceToStopMoving;
-                        
-            if(navMeshAgent.remainingDistance <= distanceToStopMoving)
+
+
+            if (navMeshAgent.remainingDistance < distanceToStopMoving )
             {
                 nextPosition = null;
                 GetComponent<villagerInfo>().currentState = nextAction;
+                GetComponent<villagerActions>().hasArrived = true;
             }
+           
         }
     }
 }

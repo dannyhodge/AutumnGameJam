@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class giveVillagerOrder : MonoBehaviour
@@ -19,44 +18,56 @@ public class giveVillagerOrder : MonoBehaviour
             {
                 RaycastHit hitInfo = new RaycastHit();
                 bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
+
+                foreach (GameObject resource in GetComponent<gameInfo>().allTargets)
+                {
+                    if (resource.tag == "Farm")
+                    {
+                        resource.GetComponent<farmInfo>().isSelected = false;
+                    }
+                    else
+                    {
+                        resource.GetComponent<resourceInfo>().isSelected = false;
+                    }
+                }
+
                 if (hit)
                 {
-                    Debug.Log("Hit " + hitInfo.transform.gameObject.name);
                     if (hitInfo.transform.gameObject.tag == "Tree")
                     {
-
-                        foreach (GameObject resource in GetComponent<gameInfo>().allTargets)
-                        {
-                            resource.GetComponent<resourceInfo>().isSelected = false;
-                        }
-
-                        hitInfo.transform.gameObject.GetComponent<resourceInfo>().isSelected = true;
-
-                        activeTarget = hitInfo.transform.gameObject;
-                        GetComponent<gameInfo>().activeVillager.GetComponent<villagerMove>().nextPosition = hitInfo.transform.gameObject.transform;
                         GetComponent<gameInfo>().activeVillager.GetComponent<villagerMove>().nextAction = State.Chopping;
-                        GetComponent<gameInfo>().activeVillager.GetComponent<villagerInfo>().currentTarget = hitInfo.transform.gameObject;
+                        hitInfo.transform.gameObject.GetComponent<resourceInfo>().isSelected = true;
+                        SetNextTarget(hitInfo);
                     }
 
                     if (hitInfo.transform.gameObject.tag == "Stone")
                     {
-
-                        foreach (GameObject resource in GetComponent<gameInfo>().allTargets)
-                        {
-                            resource.GetComponent<resourceInfo>().isSelected = false;
-                        }
-
-                        hitInfo.transform.gameObject.GetComponent<resourceInfo>().isSelected = true;
-
-                        activeTarget = hitInfo.transform.gameObject;
-                        GetComponent<gameInfo>().activeVillager.GetComponent<villagerMove>().nextPosition = hitInfo.transform.gameObject.transform;
                         GetComponent<gameInfo>().activeVillager.GetComponent<villagerMove>().nextAction = State.Mining;
-                        GetComponent<gameInfo>().activeVillager.GetComponent<villagerInfo>().currentTarget = hitInfo.transform.gameObject;
+                        hitInfo.transform.gameObject.GetComponent<resourceInfo>().isSelected = true;
+                        SetNextTarget(hitInfo);
                     }
-      
+
+                    if (hitInfo.transform.gameObject.tag == "Farm")
+                    {
+                        if (hitInfo.transform.gameObject.GetComponent<farmInfo>().canBeWatered)
+                        {
+                            GetComponent<gameInfo>().activeVillager.GetComponent<villagerMove>().nextAction = State.Farming;
+                            hitInfo.transform.gameObject.GetComponent<farmInfo>().isSelected = true;
+                            SetNextTarget(hitInfo);
+                        }
+                    }
                 }
-       
             }
         }
+    }
+
+    void SetNextTarget(RaycastHit hitInfo)
+    {
+        Debug.Log("huh");
+        Debug.Log("hitinfo: " + hitInfo.transform.name);
+
+        activeTarget = hitInfo.transform.gameObject;
+        GetComponent<gameInfo>().activeVillager.GetComponent<villagerMove>().nextPosition = hitInfo.transform;
+        GetComponent<gameInfo>().activeVillager.GetComponent<villagerInfo>().currentTarget = hitInfo.transform.gameObject;
     }
 }

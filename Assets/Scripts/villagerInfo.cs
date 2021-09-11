@@ -7,7 +7,12 @@ public class villagerInfo : MonoBehaviour
     public GameObject Scripts;
 
     public string villagerName;
+
     public int health = 10;
+    public int hunger = 10;
+    public int warmth = 10;
+
+
     public bool isSelected = false;
     public GameObject active;
     public State currentState = State.Idle;
@@ -30,7 +35,6 @@ public class villagerInfo : MonoBehaviour
         }
     }
 }
-
 
 public enum State
 {

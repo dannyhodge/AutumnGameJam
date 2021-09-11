@@ -29,9 +29,16 @@ public class selectCharacter : MonoBehaviour
                         {
                             villager.GetComponent<villagerInfo>().isSelected = false;
                         }
-                        foreach (GameObject tree in GetComponent<gameInfo>().allTargets)
+                        foreach (GameObject target in GetComponent<gameInfo>().allTargets)
                         {
-                            tree.GetComponent<resourceInfo>().isSelected = false;
+                            if(target.tag == "Farm")
+                            {
+                                target.GetComponent<farmInfo>().isSelected = false;
+                            }
+                            else
+                            {
+                                target.GetComponent<resourceInfo>().isSelected = false;
+                            }
                         }
         
                         hit.transform.gameObject.GetComponent<villagerInfo>().isSelected = true;
