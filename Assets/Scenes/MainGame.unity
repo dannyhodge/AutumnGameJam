@@ -4037,25 +4037,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 564208347, guid: 1df1c4e9b5fdde344840fc37c27c3f1e, type: 3}
-      propertyPath: gatherStrength
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7689513613450352045, guid: 1df1c4e9b5fdde344840fc37c27c3f1e, type: 3}
-      propertyPath: distanceToStopMoving
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813883179380005555, guid: 1df1c4e9b5fdde344840fc37c27c3f1e, type: 3}
-      propertyPath: villagerName
-      value: Bob
-      objectReference: {fileID: 0}
     - target: {fileID: 7983400193915631968, guid: 1df1c4e9b5fdde344840fc37c27c3f1e, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7983400193915631968, guid: 1df1c4e9b5fdde344840fc37c27c3f1e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.38
+      value: 3.752
       objectReference: {fileID: 0}
     - target: {fileID: 7983400193915631968, guid: 1df1c4e9b5fdde344840fc37c27c3f1e, type: 3}
       propertyPath: m_LocalPosition.y
