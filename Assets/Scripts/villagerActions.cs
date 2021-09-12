@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class villagerActions : MonoBehaviour
 {
+    private GameObject Scripts;
 
     public float actionSpeed = 2f;
     public float actionTimer = 0f;
@@ -13,6 +14,11 @@ public class villagerActions : MonoBehaviour
     public int gatherStrength = 2;
 
     public bool hasArrived = false;
+
+    void Start()
+    {
+        Scripts = GameObject.Find("_Scripts");
+    }
 
     void Update()
     {
@@ -33,17 +39,43 @@ public class villagerActions : MonoBehaviour
             }
             else if (GetComponent<villagerInfo>().currentState == State.Farming)
             {
-                if (wateringTimer <= wateringSpeed)
+                if (Scripts.GetComponent<seasonManager>().currentSeason != Season.Autumn)
                 {
-                    wateringTimer += Time.deltaTime;
-                }
-                else
-                {
-                    GetComponent<villagerInfo>().currentTarget.GetComponent<farmInfo>().currentWater += GetComponent<villagerInfo>().currentTarget.GetComponent<farmInfo>().waterGain;
+                    
+                    if (wateringTimer <= wateringSpeed)
+                    {
+                        wateringTimer += Time.deltaTime;
+                    }
+                    else
+                    {
+                        GetComponent<villagerInfo>().currentTarget.GetComponent<farmInfo>().currentWater += GetComponent<villagerInfo>().currentTarget.GetComponent<farmInfo>().waterGain;
+                        GetComponent<villagerInfo>().currentTarget.GetComponent<farmInfo>().foodGain += GetComponent<villagerInfo>().currentTarget.GetComponent<farmInfo>().foodGainIncrease;
+                        GetComponent<villagerInfo>().currentTarget.GetComponent<farmInfo>().timesWatered++;
+                        var allWheat = GetComponent<villagerInfo>().currentTarget.GetComponentsInChildren<wheatGrow>();
 
-                    wateringTimer = 0f;
-                    GetComponent<villagerInfo>().currentState = State.Idle;
-                    GetComponent<villagerActions>().hasArrived = false;
+                        foreach(wheatGrow wheat in allWheat)
+                        {
+                            wheat.GrowWheat();
+                        }
+
+                        wateringTimer = 0f;
+                        GetComponent<villagerInfo>().currentState = State.Idle;
+                        Debug.Log("villageraction");
+                        GetComponent<villagerActions>().hasArrived = false;
+                    }
+                }
+                else  //if it is autumn, harvest
+                {
+                    if (actionTimer <= actionSpeed)
+                    {
+                        actionTimer += Time.deltaTime;
+                    }
+                    else
+                    {
+                        GetComponent<villagerInfo>().currentTarget.GetComponent<farmInfo>().health -= gatherStrength;
+
+                        actionTimer = 0f;
+                    }
                 }
             }
         }

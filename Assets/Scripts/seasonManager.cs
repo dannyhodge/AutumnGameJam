@@ -13,18 +13,13 @@ public class seasonManager : MonoBehaviour
     public int amountToHitWinter = 38;
     public int amountToHitSpring = 62;
     public int amountToHitSummer = 80;
-    public int amountToHitAutumn = 100;
+    public int amountToHitAutumn = 1;
 
 
     //autumn lasts 2 mins, other seasons 1 each, 5 total
     //5 * 60 = 300, so 3 seconds per increment
 
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         sliderTimer += Time.deltaTime;
@@ -32,19 +27,31 @@ public class seasonManager : MonoBehaviour
         {
             seasonSliderCurrent++;
             sliderTimer = 0f;
+
+            if (seasonSliderCurrent == 101)
+            {
+                seasonSliderCurrent = 1;
+                currentYear++;
+            }
+
+            if (seasonSliderCurrent == amountToHitAutumn || seasonSliderCurrent == amountToHitWinter || seasonSliderCurrent == amountToHitSpring || seasonSliderCurrent == amountToHitSummer)
+            {
+                ChangeSeason();
+            }
         }
 
-        if(seasonSliderCurrent == amountToHitWinter) currentSeason = Season.Winter;
-        if(seasonSliderCurrent == amountToHitSpring) currentSeason = Season.Spring;
-        if(seasonSliderCurrent == amountToHitSummer) currentSeason = Season.Summer;
-        if(seasonSliderCurrent == amountToHitAutumn) currentSeason = Season.Autumn;
+  
 
-        if (seasonSliderCurrent == 101)
-        {
-            seasonSliderCurrent = 1;
-            currentYear++;
-        }
+       
         
+    }
+
+    void ChangeSeason()
+    {
+        if (seasonSliderCurrent == amountToHitWinter) currentSeason = Season.Winter;
+        if (seasonSliderCurrent == amountToHitSpring) currentSeason = Season.Spring;
+        if (seasonSliderCurrent == amountToHitSummer) currentSeason = Season.Summer;
+        if (seasonSliderCurrent == amountToHitAutumn) currentSeason = Season.Autumn;
     }
 }
 

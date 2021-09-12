@@ -27,11 +27,11 @@ public class villagerMove : MonoBehaviour
 
             navMeshAgent.stoppingDistance = distanceToStopMoving;
 
-
             if (navMeshAgent.remainingDistance < distanceToStopMoving )
             {
                 nextPosition = null;
                 GetComponent<villagerInfo>().currentState = nextAction;
+                nextAction = State.Idle;
                 GetComponent<villagerActions>().hasArrived = true;
             }
            

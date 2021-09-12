@@ -54,6 +54,7 @@ public class resourceInfo : MonoBehaviour
             {
                 if (villager.GetComponent<villagerInfo>().currentTarget == gameObject)
                 {
+                    Debug.Log("resource info");
                     villager.GetComponent<villagerInfo>().currentTarget = null;
                     villager.GetComponent<villagerInfo>().currentState = State.Idle;
                 }

@@ -10,6 +10,7 @@ TagManager:
   - Stone
   - Farm
   - Iron
+  - Wheat
   layers:
   - Default
   - TransparentFX

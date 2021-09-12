@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 4895396521853688465}
   - component: {fileID: 8509985377830240274}
   - component: {fileID: 4627222363132155915}
+  - component: {fileID: 8131504257717926110}
   m_Layer: 0
   m_Name: Cube.010
-  m_TagString: Untagged
+  m_TagString: Wheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508817653942962061}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.3391445, y: -0.84630007, z: 0.22189784}
-  m_LocalScale: {x: 0.050000004, y: 0.050000004, z: 0.1}
+  m_LocalPosition: {x: 0.3391445, y: -0.902, z: 0.22189784}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.05}
   m_Children: []
   m_Father: {fileID: 3556487404987033730}
   m_RootOrder: 10
@@ -82,6 +83,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8131504257717926110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508817653942962061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8e2a7afd3765f44b04f609ea0b27d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWheatSizeId: 0
 --- !u!1 &2453016909579378214
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,9 +107,10 @@ GameObject:
   - component: {fileID: 3638940932253269105}
   - component: {fileID: 8940034997343655455}
   - component: {fileID: 3627757206496619739}
+  - component: {fileID: 4086032806215824245}
   m_Layer: 0
   m_Name: Cube.014
-  m_TagString: Untagged
+  m_TagString: Wheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,8 +123,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2453016909579378214}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.3391445, y: -0.84630007, z: 0.83274657}
-  m_LocalScale: {x: 0.050000004, y: 0.050000004, z: 0.1}
+  m_LocalPosition: {x: 0.3391445, y: -0.902, z: 0.83274657}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.05}
   m_Children: []
   m_Father: {fileID: 3556487404987033730}
   m_RootOrder: 14
@@ -164,6 +179,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4086032806215824245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2453016909579378214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8e2a7afd3765f44b04f609ea0b27d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWheatSizeId: 0
 --- !u!1 &2532957134212325131
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,9 +203,10 @@ GameObject:
   - component: {fileID: 8454867592198602374}
   - component: {fileID: 5595951199486220243}
   - component: {fileID: 2143329685813473071}
+  - component: {fileID: 7017516043396363811}
   m_Layer: 0
   m_Name: Cube.004
-  m_TagString: Untagged
+  m_TagString: Wheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -190,8 +219,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2532957134212325131}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.7529596, y: -0.84630007, z: -0.8217454}
-  m_LocalScale: {x: 0.050000004, y: 0.050000004, z: 0.1}
+  m_LocalPosition: {x: -0.7529596, y: -0.902, z: -0.8217454}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.05}
   m_Children: []
   m_Father: {fileID: 3556487404987033730}
   m_RootOrder: 4
@@ -246,6 +275,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7017516043396363811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2532957134212325131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8e2a7afd3765f44b04f609ea0b27d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWheatSizeId: 0
 --- !u!1 &3027513701611856664
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,9 +299,10 @@ GameObject:
   - component: {fileID: 6359828473435190409}
   - component: {fileID: 4856830963207776322}
   - component: {fileID: 4757089648151029271}
+  - component: {fileID: 1064538329045355425}
   m_Layer: 0
   m_Name: Cube.003
-  m_TagString: Untagged
+  m_TagString: Wheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -272,8 +315,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3027513701611856664}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.21665263, y: -0.84630007, z: -0.8217454}
-  m_LocalScale: {x: 0.050000004, y: 0.050000004, z: 0.1}
+  m_LocalPosition: {x: -0.21665263, y: -0.902, z: -0.8217454}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.05}
   m_Children: []
   m_Father: {fileID: 3556487404987033730}
   m_RootOrder: 3
@@ -328,6 +371,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1064538329045355425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3027513701611856664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8e2a7afd3765f44b04f609ea0b27d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWheatSizeId: 0
 --- !u!1 &3298614061123144956
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,9 +395,10 @@ GameObject:
   - component: {fileID: 2227238621834633384}
   - component: {fileID: 2822139109429728792}
   - component: {fileID: 1613333806697667121}
+  - component: {fileID: 8545989458610763657}
   m_Layer: 0
   m_Name: Cube.013
-  m_TagString: Untagged
+  m_TagString: Wheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -354,8 +411,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3298614061123144956}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.7878553, y: -0.84630007, z: 0.83274657}
-  m_LocalScale: {x: 0.050000004, y: 0.050000004, z: 0.1}
+  m_LocalPosition: {x: 0.7878553, y: -0.902, z: 0.83274657}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.05}
   m_Children: []
   m_Father: {fileID: 3556487404987033730}
   m_RootOrder: 13
@@ -410,6 +467,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8545989458610763657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3298614061123144956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8e2a7afd3765f44b04f609ea0b27d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWheatSizeId: 0
 --- !u!1 &3835040710634425278
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,9 +491,10 @@ GameObject:
   - component: {fileID: 2718330351166849777}
   - component: {fileID: 3072694719319320790}
   - component: {fileID: 4047097702063706955}
+  - component: {fileID: 4624131868910175873}
   m_Layer: 0
   m_Name: Cube.008
-  m_TagString: Untagged
+  m_TagString: Wheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -436,8 +507,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3835040710634425278}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.7529596, y: -0.84630007, z: -0.3509707}
-  m_LocalScale: {x: 0.050000004, y: 0.050000004, z: 0.1}
+  m_LocalPosition: {x: -0.7529596, y: -0.902, z: -0.3509707}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.05}
   m_Children: []
   m_Father: {fileID: 3556487404987033730}
   m_RootOrder: 8
@@ -492,6 +563,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4624131868910175873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3835040710634425278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8e2a7afd3765f44b04f609ea0b27d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWheatSizeId: 0
 --- !u!1 &4184124288579105336
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,6 +586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3556487404987033730}
   - component: {fileID: 488471851596408502}
+  - component: {fileID: 488471851596408503}
   m_Layer: 0
   m_Name: farm
   m_TagString: Farm
@@ -553,14 +638,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb9a3c8a08a3c1f469aabb61802ff4cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  water: 150
+  health: 10
+  maxWater: 10
+  currentWater: 1
   waterLoss: 1
   waterLossTimer: 0
-  waterLossTimerMax: 1
+  waterLossTimerMax: 10
   isSelected: 0
   active: {fileID: 6146213644076057714}
+  canBeWatered: 0
   scripts: {fileID: 0}
+  waterGain: 5
+  foodGain: 40
+  deathTimer: 0
+  dead: 0
+--- !u!65 &488471851596408503
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4184124288579105336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.33, y: 0.43, z: 1.94}
+  m_Center: {x: 0, y: -1.01, z: 0}
 --- !u!1 &4421959252044184845
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,9 +758,10 @@ GameObject:
   - component: {fileID: 8648272222986719056}
   - component: {fileID: 2240504766838481081}
   - component: {fileID: 4631033384290265252}
+  - component: {fileID: 596219747475499813}
   m_Layer: 0
   m_Name: Cube.002
-  m_TagString: Untagged
+  m_TagString: Wheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -669,8 +774,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4763979108202352268}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.3391445, y: -0.84630007, z: -0.8217454}
-  m_LocalScale: {x: 0.050000004, y: 0.050000004, z: 0.1}
+  m_LocalPosition: {x: 0.3391445, y: -0.902, z: -0.8217454}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.05}
   m_Children: []
   m_Father: {fileID: 3556487404987033730}
   m_RootOrder: 2
@@ -725,6 +830,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &596219747475499813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4763979108202352268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8e2a7afd3765f44b04f609ea0b27d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWheatSizeId: 0
 --- !u!1 &4832629607520348433
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,9 +854,10 @@ GameObject:
   - component: {fileID: 2786445166369917225}
   - component: {fileID: 1868943261099469875}
   - component: {fileID: 7311512267529196189}
+  - component: {fileID: 9115583790070924463}
   m_Layer: 0
   m_Name: Cube.012
-  m_TagString: Untagged
+  m_TagString: Wheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -751,8 +870,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4832629607520348433}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.7529596, y: -0.84630007, z: 0.22189784}
-  m_LocalScale: {x: 0.050000004, y: 0.050000004, z: 0.1}
+  m_LocalPosition: {x: -0.7529596, y: -0.902, z: 0.22189784}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.05}
   m_Children: []
   m_Father: {fileID: 3556487404987033730}
   m_RootOrder: 12
@@ -807,6 +926,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9115583790070924463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4832629607520348433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8e2a7afd3765f44b04f609ea0b27d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWheatSizeId: 0
 --- !u!1 &5461595868960779514
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,9 +950,10 @@ GameObject:
   - component: {fileID: 7224322898679665796}
   - component: {fileID: 2410574274430616960}
   - component: {fileID: 5089319738929942738}
+  - component: {fileID: 1064516833802000286}
   m_Layer: 0
   m_Name: Cube.007
-  m_TagString: Untagged
+  m_TagString: Wheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -833,8 +966,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5461595868960779514}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.21665263, y: -0.84630007, z: -0.3509707}
-  m_LocalScale: {x: 0.050000004, y: 0.050000004, z: 0.1}
+  m_LocalPosition: {x: -0.21665263, y: -0.902, z: -0.3509707}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.05}
   m_Children: []
   m_Father: {fileID: 3556487404987033730}
   m_RootOrder: 7
@@ -889,6 +1022,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1064516833802000286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5461595868960779514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8e2a7afd3765f44b04f609ea0b27d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWheatSizeId: 0
 --- !u!1 &5622713933355618169
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,9 +1046,10 @@ GameObject:
   - component: {fileID: 1043170073549870788}
   - component: {fileID: 1986543100312941801}
   - component: {fileID: 6731177025393159544}
+  - component: {fileID: 2929262332404293422}
   m_Layer: 0
   m_Name: Cube.001
-  m_TagString: Untagged
+  m_TagString: Wheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -915,8 +1062,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5622713933355618169}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.7878553, y: -0.84630007, z: -0.8217454}
-  m_LocalScale: {x: 0.050000004, y: 0.050000004, z: 0.1}
+  m_LocalPosition: {x: 0.7878553, y: -0.885, z: -0.8217454}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.05}
   m_Children: []
   m_Father: {fileID: 3556487404987033730}
   m_RootOrder: 1
@@ -971,6 +1118,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2929262332404293422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5622713933355618169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8e2a7afd3765f44b04f609ea0b27d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWheatSizeId: 0
 --- !u!1 &5716990680727219213
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,9 +1142,10 @@ GameObject:
   - component: {fileID: 6062121835568938152}
   - component: {fileID: 5593995746238787691}
   - component: {fileID: 7732038283528505510}
+  - component: {fileID: 8590051147722772842}
   m_Layer: 0
   m_Name: Cube.006
-  m_TagString: Untagged
+  m_TagString: Wheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -997,8 +1158,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5716990680727219213}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.3391445, y: -0.84630007, z: -0.3509707}
-  m_LocalScale: {x: 0.050000004, y: 0.050000004, z: 0.1}
+  m_LocalPosition: {x: 0.3391445, y: -0.902, z: -0.3509707}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.05}
   m_Children: []
   m_Father: {fileID: 3556487404987033730}
   m_RootOrder: 6
@@ -1053,6 +1214,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8590051147722772842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5716990680727219213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8e2a7afd3765f44b04f609ea0b27d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWheatSizeId: 0
 --- !u!1 &6146213644076057714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,9 +1321,10 @@ GameObject:
   - component: {fileID: 828669829321906729}
   - component: {fileID: 3759493612584094614}
   - component: {fileID: 2553821124120118340}
+  - component: {fileID: 4752239067220814343}
   m_Layer: 0
   m_Name: Cube.009
-  m_TagString: Untagged
+  m_TagString: Wheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1162,8 +1337,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6146392937874850369}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.7878553, y: -0.84630007, z: 0.22189784}
-  m_LocalScale: {x: 0.050000004, y: 0.050000004, z: 0.1}
+  m_LocalPosition: {x: 0.7878553, y: -0.902, z: 0.22189784}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.05}
   m_Children: []
   m_Father: {fileID: 3556487404987033730}
   m_RootOrder: 9
@@ -1218,6 +1393,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4752239067220814343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6146392937874850369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8e2a7afd3765f44b04f609ea0b27d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWheatSizeId: 0
 --- !u!1 &6483116184643141027
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,9 +1417,10 @@ GameObject:
   - component: {fileID: 7502420435928345262}
   - component: {fileID: 6871952659380804483}
   - component: {fileID: 948163448089426924}
+  - component: {fileID: 7615612936336062142}
   m_Layer: 0
   m_Name: Cube.011
-  m_TagString: Untagged
+  m_TagString: Wheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1244,8 +1433,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6483116184643141027}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.21665263, y: -0.84630007, z: 0.22189784}
-  m_LocalScale: {x: 0.050000004, y: 0.050000004, z: 0.1}
+  m_LocalPosition: {x: -0.21665263, y: -0.902, z: 0.22189784}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.05}
   m_Children: []
   m_Father: {fileID: 3556487404987033730}
   m_RootOrder: 11
@@ -1300,6 +1489,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7615612936336062142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6483116184643141027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8e2a7afd3765f44b04f609ea0b27d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWheatSizeId: 0
 --- !u!1 &6853864148146267030
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,9 +1513,10 @@ GameObject:
   - component: {fileID: 942890741223121432}
   - component: {fileID: 4776116360471977515}
   - component: {fileID: 5781767238517049050}
+  - component: {fileID: 2100283138799509541}
   m_Layer: 0
   m_Name: Cube.005
-  m_TagString: Untagged
+  m_TagString: Wheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1326,8 +1529,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6853864148146267030}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.7878553, y: -0.84630007, z: -0.3509707}
-  m_LocalScale: {x: 0.050000004, y: 0.050000004, z: 0.1}
+  m_LocalPosition: {x: 0.7878553, y: -0.902, z: -0.3509707}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.05}
   m_Children: []
   m_Father: {fileID: 3556487404987033730}
   m_RootOrder: 5
@@ -1382,6 +1585,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2100283138799509541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6853864148146267030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8e2a7afd3765f44b04f609ea0b27d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWheatSizeId: 0
 --- !u!1 &7324640519504043816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,9 +1609,10 @@ GameObject:
   - component: {fileID: 1039319832570389413}
   - component: {fileID: 4061198620190236261}
   - component: {fileID: 815281858064983987}
+  - component: {fileID: 9084718474710356325}
   m_Layer: 0
   m_Name: Cube.015
-  m_TagString: Untagged
+  m_TagString: Wheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1408,8 +1625,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7324640519504043816}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.21665263, y: -0.84630007, z: 0.83274657}
-  m_LocalScale: {x: 0.050000004, y: 0.050000004, z: 0.1}
+  m_LocalPosition: {x: -0.21665263, y: -0.902, z: 0.83274657}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.05}
   m_Children: []
   m_Father: {fileID: 3556487404987033730}
   m_RootOrder: 15
@@ -1464,6 +1681,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9084718474710356325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324640519504043816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8e2a7afd3765f44b04f609ea0b27d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWheatSizeId: 0
 --- !u!1 &9094122491612040049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,9 +1705,10 @@ GameObject:
   - component: {fileID: 3409176616398425672}
   - component: {fileID: 3248358917079590021}
   - component: {fileID: 234430201140438037}
+  - component: {fileID: 9019497726346573870}
   m_Layer: 0
   m_Name: Cube.016
-  m_TagString: Untagged
+  m_TagString: Wheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1490,8 +1721,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9094122491612040049}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.7529596, y: -0.84630007, z: 0.83274657}
-  m_LocalScale: {x: 0.050000004, y: 0.050000004, z: 0.1}
+  m_LocalPosition: {x: -0.7529596, y: -0.902, z: 0.83274657}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.05}
   m_Children: []
   m_Father: {fileID: 3556487404987033730}
   m_RootOrder: 16
@@ -1546,3 +1777,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9019497726346573870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9094122491612040049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8e2a7afd3765f44b04f609ea0b27d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWheatSizeId: 0

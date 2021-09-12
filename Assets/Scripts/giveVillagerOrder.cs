@@ -49,7 +49,8 @@ public class giveVillagerOrder : MonoBehaviour
 
                     if (hitInfo.transform.gameObject.tag == "Farm")
                     {
-                        if (hitInfo.transform.gameObject.GetComponent<farmInfo>().canBeWatered)
+                        if (hitInfo.transform.gameObject.GetComponent<farmInfo>().canBeWatered 
+                            || (GetComponent<seasonManager>().currentSeason == Season.Autumn && hitInfo.transform.gameObject.GetComponent<farmInfo>().timesWatered != 0))
                         {
                             GetComponent<gameInfo>().activeVillager.GetComponent<villagerMove>().nextAction = State.Farming;
                             hitInfo.transform.gameObject.GetComponent<farmInfo>().isSelected = true;
@@ -63,9 +64,6 @@ public class giveVillagerOrder : MonoBehaviour
 
     void SetNextTarget(RaycastHit hitInfo)
     {
-        Debug.Log("huh");
-        Debug.Log("hitinfo: " + hitInfo.transform.name);
-
         activeTarget = hitInfo.transform.gameObject;
         GetComponent<gameInfo>().activeVillager.GetComponent<villagerMove>().nextPosition = hitInfo.transform;
         GetComponent<gameInfo>().activeVillager.GetComponent<villagerInfo>().currentTarget = hitInfo.transform.gameObject;
